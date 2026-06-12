@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Smartes Zuhause</title>
+  <style>
+    :root { --bg:#0E1116; --accent:#1FB6FF; --fg:#FFFFFF; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100vh; background:var(--bg); color:var(--fg);
+      font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+      display:flex; justify-content:center;
+      padding:32px 18px 48px;
+    }
+    .wrap { width:100%; max-width:520px; text-align:center; }
+    .avatar {
+      width:88px; height:88px; line-height:88px; margin:8px auto 14px;
+      font-size:44px; border-radius:50%;
+      background:rgba(31,182,255,.12); border:2px solid var(--accent);
+    }
+    h1 { font-size:22px; margin:0 0 6px; }
+    .bio { font-size:14px; line-height:1.5; opacity:.85; margin:0 auto 24px; max-width:420px; }
+    .btn {
+      display:block; text-decoration:none; color:var(--fg);
+      background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.10);
+      border-radius:16px; padding:16px 18px; margin:12px 0; text-align:center;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color:var(--accent); background:rgba(31,182,255,.08); }
+    .btn-label { display:block; font-size:16px; font-weight:600; }
+    .btn-sub { display:block; font-size:12.5px; opacity:.7; margin-top:3px; }
+    .btn.top {
+      background:var(--accent); color:#0E1116; border-color:var(--accent);
+      font-weight:700;
+    }
+    .btn.top:hover { background:var(--accent); filter:brightness(1.08); }
+    .btn.top .btn-label { color:#0E1116; }
+    .socials { display:flex; gap:10px; justify-content:center; margin:26px 0 18px; flex-wrap:wrap; }
+    .social {
+      text-decoration:none; color:var(--fg); font-size:13px; font-weight:600;
+      padding:9px 16px; border-radius:999px; border:1px solid rgba(255,255,255,.16);
+    }
+    .social:hover { border-color:var(--accent); color:var(--accent); }
+    .disclosure { font-size:11px; opacity:.55; line-height:1.5; margin-top:22px; max-width:420px; margin-left:auto; margin-right:auto; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="avatar">🏠</div>
+    <h1>Smartes Zuhause</h1>
+    <p class="bio">Smart Home einfach erklaert – guenstiger, sicherer, ohne Technik-Studium. 👇 Geprueftes Set zu jedem Thema.</p>
+    <a class="btn top" href="https://www.amazon.de/s?k=smart+home+starter+set+matter" target="_blank" rel="noopener nofollow sponsored"><span class="btn-label">🏠 Alle Smart-Home-Empfehlungen</span></a>
+    
+      <a class="btn" href="https://www.amazon.de/s?k=smarte+steckdose+messfunktion+matter" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">💸 Geld &amp; Strom sparen</span>
+        <span class="btn-sub">Thermostate, Messsteckdosen, Standby stoppen</span>
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=funk+wandschalter+zigbee+kabellos+ohne+bohren" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Smart Home in der Mietwohnung</span>
+        <span class="btn-sub">Ohne Bohren &amp; Umbau – kautionssicher</span>
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=home+assistant+green+zigbee+stick" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🔒 Datenschutz / lokal &amp; ohne Cloud</span>
+        <span class="btn-sub">Home Assistant, lokale Hubs &amp; Sprachsteuerung</span>
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=ueberwachungskamera+lokal+sd+karte+ohne+abo" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🛡️ Sicherheit</span>
+        <span class="btn-sub">Kameras ohne Abo, Tuerschloss, Anwesenheit simulieren</span>
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=smart+home+hub+matter+zigbee" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🧭 Anfaenger-Fehler &amp; So faengst du an</span>
+        <span class="btn-sub">Das richtige Starter-Set in der richtigen Reihenfolge</span>
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=bewegungsmelder+smart+zigbee" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">✨ Komfort-Automationen</span>
+        <span class="btn-sub">Bewegungsmelder, Licht-Szenen, Morgenroutine</span>
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=balkonkraftwerk+800w+komplettset" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🛒 Lohnt sich das? Kaufberatung</span>
+        <span class="btn-sub">Balkonkraftwerk &amp; 100€-vs-400€-Einstieg</span>
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=smart+speaker+sprachassistent+matter" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🤖 KI im Alltag &amp; Sprachsteuerung</span>
+        <span class="btn-sub">Sprachassistenten &amp; smarte Hubs</span>
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=automatische+bewaesserung+balkon+set" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🌦️ Saisonal</span>
+        <span class="btn-sub">Heizen, Fenster-offen-Erkennung, Balkon-Bewaesserung</span>
+      </a>
+    <nav class="socials">
+        <a class="social" href="https://instagram.com/smarteszuhause" target="_blank" rel="noopener">Instagram</a>
+        <a class="social" href="https://tiktok.com/@smarteszuhause" target="_blank" rel="noopener">TikTok</a>
+        <a class="social" href="https://youtube.com/@smarteszuhause" target="_blank" rel="noopener">YouTube</a>
+    </nav>
+    <p class="disclosure">Enthaelt Produktempfehlungen (Affiliate-Suchlinks). Fuer dich entstehen dabei keine Mehrkosten.</p>
+  </main>
+</body>
+</html>
