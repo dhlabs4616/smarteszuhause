@@ -37,6 +37,23 @@
     }
     .btn.top:hover { background:var(--accent); filter:brightness(1.08); }
     .btn.top .btn-label { color:#0E1116; }
+    .theme { margin:12px 0; }
+    .theme .btn { margin:0; }
+    .guide {
+      margin:6px 0 0; text-align:left;
+      background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); border-radius:12px;
+      padding:0 14px;
+    }
+    .guide summary {
+      cursor:pointer; list-style:none; padding:11px 2px;
+      font-size:13px; font-weight:600; color:var(--accent);
+    }
+    .guide summary::-webkit-details-marker { display:none; }
+    .guide summary::before { content:"▸ "; }
+    .guide[open] summary::before { content:"▾ "; }
+    .guide ol { margin:2px 0 8px; padding-left:20px; }
+    .guide li { font-size:13px; line-height:1.55; margin:6px 0; opacity:.9; }
+    .guide .tip { font-size:12.5px; line-height:1.5; opacity:.8; margin:6px 0 12px; }
     .socials { display:flex; gap:10px; justify-content:center; margin:26px 0 18px; flex-wrap:wrap; }
     .social {
       text-decoration:none; color:var(--fg); font-size:13px; font-weight:600;
@@ -50,45 +67,108 @@
   <main class="wrap">
     <div class="avatar">🏠</div>
     <h1>Smartes Zuhause</h1>
-    <p class="bio">Smart Home einfach erklaert – guenstiger, sicherer, ohne Technik-Studium. 👇 Geprueftes Set zu jedem Thema.</p>
+    <p class="bio">Smart Home einfach erklaert – guenstiger, sicherer, ohne Technik-Studium. 👇 Kurze Anleitung + geprueftes Set zu jedem Thema.</p>
     <a class="btn top" href="https://www.amazon.de/s?k=smart+home+starter+set+matter" target="_blank" rel="noopener nofollow sponsored"><span class="btn-label">🏠 Alle Smart-Home-Empfehlungen</span></a>
     
-      <a class="btn" href="https://www.amazon.de/s?k=smarte+steckdose+messfunktion+matter" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">💸 Geld &amp; Strom sparen</span>
-        <span class="btn-sub">Thermostate, Messsteckdosen, Standby stoppen</span>
-      </a>
-      <a class="btn" href="https://www.amazon.de/s?k=funk+wandschalter+zigbee+kabellos+ohne+bohren" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">🏠 Smart Home in der Mietwohnung</span>
-        <span class="btn-sub">Ohne Bohren &amp; Umbau – kautionssicher</span>
-      </a>
-      <a class="btn" href="https://www.amazon.de/s?k=home+assistant+green+zigbee+stick" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">🔒 Datenschutz / lokal &amp; ohne Cloud</span>
-        <span class="btn-sub">Home Assistant, lokale Hubs &amp; Sprachsteuerung</span>
-      </a>
-      <a class="btn" href="https://www.amazon.de/s?k=ueberwachungskamera+lokal+sd+karte+ohne+abo" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">🛡️ Sicherheit</span>
-        <span class="btn-sub">Kameras ohne Abo, Tuerschloss, Anwesenheit simulieren</span>
-      </a>
-      <a class="btn" href="https://www.amazon.de/s?k=smart+home+hub+matter+zigbee" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">🧭 Anfaenger-Fehler &amp; So faengst du an</span>
-        <span class="btn-sub">Das richtige Starter-Set in der richtigen Reihenfolge</span>
-      </a>
-      <a class="btn" href="https://www.amazon.de/s?k=bewegungsmelder+smart+zigbee" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">✨ Komfort-Automationen</span>
-        <span class="btn-sub">Bewegungsmelder, Licht-Szenen, Morgenroutine</span>
-      </a>
-      <a class="btn" href="https://www.amazon.de/s?k=balkonkraftwerk+800w+komplettset" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">🛒 Lohnt sich das? Kaufberatung</span>
-        <span class="btn-sub">Balkonkraftwerk &amp; 100€-vs-400€-Einstieg</span>
-      </a>
-      <a class="btn" href="https://www.amazon.de/s?k=smart+speaker+sprachassistent+matter" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">🤖 KI im Alltag &amp; Sprachsteuerung</span>
-        <span class="btn-sub">Sprachassistenten &amp; smarte Hubs</span>
-      </a>
-      <a class="btn" href="https://www.amazon.de/s?k=automatische+bewaesserung+balkon+set" target="_blank" rel="noopener nofollow sponsored">
-        <span class="btn-label">🌦️ Saisonal</span>
-        <span class="btn-sub">Heizen, Fenster-offen-Erkennung, Balkon-Bewaesserung</span>
-      </a>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=smarte+steckdose+messfunktion+matter" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">💸 Geld &amp; Strom sparen</span>
+          <span class="btn-sub">Thermostate, Messsteckdosen, Standby stoppen</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Standby-Fresser finden: eine Messsteckdose an TV, PC oder Konsole stecken – die App zeigt den echten Verbrauch.</li><li>Die groessten Verbraucher auf smarte Steckdosen legen und per Zeitplan nachts komplett trennen.</li><li>Pro Raum ein Heizkoerper-Thermostat: Zieltemperatur setzen und absenken, wenn niemand da ist.</li></ol>
+          <p class="tip">💡 Schon 3–4 smarte Steckdosen + 1 Thermostat zeigen den Effekt auf der naechsten Abrechnung.</p>
+        </details>
+      </div>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=funk+wandschalter+zigbee+kabellos+ohne+bohren" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">🏠 Smart Home in der Mietwohnung</span>
+          <span class="btn-sub">Ohne Bohren &amp; Umbau – kautionssicher</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Nur klebende/steckbare Technik waehlen: Funk-Wandschalter zum Aufkleben, smarte Steckdosen, Klebe-Sensoren.</li><li>Vorhandene Schalter NICHT tauschen – den Funk-Taster einfach daneben kleben, Strom bleibt unberuehrt.</li><li>Beim Auszug abziehen, Kleberreste loesen – Originalzustand bleibt, Kaution sicher.</li></ol>
+          <p class="tip">💡 Alles ueber Zigbee/Matter + App steuern, kein Eingriff in die Elektrik = kein Elektriker noetig.</p>
+        </details>
+      </div>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=home+assistant+green+zigbee+stick" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">🔒 Datenschutz / lokal &amp; ohne Cloud</span>
+          <span class="btn-sub">Home Assistant, lokale Hubs &amp; Sprachsteuerung</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Eine lokale Zentrale statt Cloud: Home Assistant (z. B. auf Home Assistant Green oder Raspberry Pi).</li><li>Geraete mit Zigbee oder Matter waehlen – laufen lokal, ohne Konto beim Hersteller.</li><li>Fernzugriff spaeter sicher per VPN einrichten, nicht ueber eine fremde Hersteller-Cloud.</li></ol>
+          <p class="tip">💡 Einmal eingerichtet laeuft alles auch ohne Internet weiter – und deine Daten bleiben zuhause.</p>
+        </details>
+      </div>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=ueberwachungskamera+lokal+sd+karte+ohne+abo" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">🛡️ Sicherheit</span>
+          <span class="btn-sub">Kameras ohne Abo, Tuerschloss, Anwesenheit simulieren</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Kamera mit lokaler SD-/Speicher-Aufnahme waehlen (kein Abo) und Push aufs Handy aktivieren.</li><li>Tuer absichern: smartes Tuerschloss oder Nachruest-Zylinder – fuer Mieter ohne Umbau.</li><li>Anwesenheit simulieren: Licht per Zufalls-Zeitplan, Rolllaeden mit festem Zeitplan.</li></ol>
+          <p class="tip">💡 Vor dem Urlaub einmal testen und als Szene &quot;Urlaub&quot; speichern – dann reicht ein Tippen.</p>
+        </details>
+      </div>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=smart+home+hub+matter+zigbee" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">🧭 Anfaenger-Fehler &amp; So faengst du an</span>
+          <span class="btn-sub">Das richtige Starter-Set in der richtigen Reihenfolge</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Reihenfolge: 1) Hub (Matter/Zigbee), 2) zwei bis drei smarte Steckdosen, 3) ein Sensor (Bewegung/Tuer).</li><li>Mit EINER nuetzlichen Automation starten, z. B. Licht bei Bewegung – ein schneller Erfolg motiviert.</li><li>Erst erweitern, wenn das Erste sicher laeuft – nicht alles auf einmal kaufen.</li></ol>
+          <p class="tip">💡 Guenstig anfangen (~100 €) reicht zum Lernen; spaeter gezielt das aufruesten, was du wirklich nutzt.</p>
+        </details>
+      </div>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=bewegungsmelder+smart+zigbee" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">✨ Komfort-Automationen</span>
+          <span class="btn-sub">Bewegungsmelder, Licht-Szenen, Morgenroutine</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Bewegungsmelder + smarte Lampe koppeln: Licht geht automatisch an/aus – ideal fuer Flur, Bad, Keller.</li><li>Morgenroutine als Szene: Licht warm, Heizung hoch, evtl. Kaffee – ausgeloest per Zeitplan.</li><li>Schlafmodus als Gegenstueck: abends schaltet alles aus, was nicht laufen muss.</li></ol>
+          <p class="tip">💡 Eine Automation pro Woche dazunehmen – nach einem Monat laeuft erstaunlich viel von selbst.</p>
+        </details>
+      </div>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=balkonkraftwerk+800w+komplettset" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">🛒 Lohnt sich das? Kaufberatung</span>
+          <span class="btn-sub">Balkonkraftwerk &amp; 100€-vs-400€-Einstieg</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Balkonkraftwerk: 800-W-Komplettset, moeglichst Sued-Ausrichtung, Einspeisung ueber die Steckdose.</li><li>Einstieg 100 € vs. 400 €: erst klein testen, ob du es nutzt, dann gezielt nachkaufen.</li><li>Auf Matter/Zigbee achten – herstelleruebergreifend und damit zukunftssicher.</li></ol>
+          <p class="tip">💡 Nicht das Teuerste kaufen, sondern das, was du wirklich taeglich nutzt – das rechnet sich am ehesten.</p>
+        </details>
+      </div>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=smart+speaker+sprachassistent+matter" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">🤖 KI im Alltag &amp; Sprachsteuerung</span>
+          <span class="btn-sub">Sprachassistenten &amp; smarte Hubs</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Smart Speaker / Sprachassistent mit Matter waehlen – steuert Geraete herstelleruebergreifend.</li><li>Datenschutz-Alternative: lokale Sprachsteuerung ueber Home Assistant statt Hersteller-Cloud.</li><li>Haeufige Befehle als Routinen/Szenen anlegen, z. B. &quot;Guten Morgen&quot; oder &quot;Alles aus&quot;.</li></ol>
+          <p class="tip">💡 Mit zwei bis drei Sprachbefehlen starten, die du wirklich taeglich brauchst.</p>
+        </details>
+      </div>
+      <div class="theme">
+        <a class="btn" href="https://www.amazon.de/s?k=automatische+bewaesserung+balkon+set" target="_blank" rel="noopener nofollow sponsored">
+          <span class="btn-label">🌦️ Saisonal</span>
+          <span class="btn-sub">Heizen, Fenster-offen-Erkennung, Balkon-Bewaesserung</span>
+        </a>
+        <details class="guide">
+          <summary>📋 Kurz-Anleitung</summary>
+          <ol><li>Heizen: Thermostate + Fenster-offen-Sensor – die Heizung dreht beim Lueften automatisch runter.</li><li>Balkon-Bewaesserung: Zeitschalt-Ventil + Schlauch, laeuft automatisch frueh morgens.</li><li>Saisonwechsel: im Winter Absenkzeiten setzen, im Sommer den Bewaesserungs-Zeitplan anpassen.</li></ol>
+          <p class="tip">💡 Einmal pro Saison die Zeitplaene durchsehen – sonst musst du nichts mehr tun.</p>
+        </details>
+      </div>
     <nav class="socials">
         <a class="social" href="https://instagram.com/smarteszuhause" target="_blank" rel="noopener">Instagram</a>
         <a class="social" href="https://tiktok.com/@smarteszuhause" target="_blank" rel="noopener">TikTok</a>
